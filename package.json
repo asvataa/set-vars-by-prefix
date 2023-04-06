@@ -1,5 +1,5 @@
 {
-  "name": "set-variables",
+  "name": "set-vars-by-prefix",
   "version": "1.0.0",
   "description": "set github actions variable using ternary operator",
   "main": "index.js",

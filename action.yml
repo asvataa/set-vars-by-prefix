@@ -1,12 +1,15 @@
-name: 'set-variables'
-description: 'Set variables dynamically and get the resolved output'
-author: 'marcdomain'
+name: 'set-vars-by-prefix'
+description: 'Set variables only who has prefix'
+author: 'asvataa'
 branding:
   icon: 'aperture'
   color: 'purple'
 inputs:
   variables:
     description: 'Variables to be treated'
+    required: true
+  varsPrefix:
+    description: 'Prefix of variables'
     required: true
 runs:
   using: 'node16'
