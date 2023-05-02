@@ -14,10 +14,12 @@ function getVars(vars) {
 try {
   const variables = getVars(core.getInput("variables", { required: true }));
   const values_prefix = core.getInput("varsPrefix");
+  const remove_prefix = core.getInput("removePrefix");
 
   for (const key in variables) {
     if (key.startsWith(values_prefix)) {
-      core.exportVariable(key, variables[key]);
+      const replaced_key = (remove_prefix == "true") ? key.replace(values_prefix + '_', '') : key
+      core.exportVariable(replaced_key, variables[key]);
     }
   }
 } catch ({message}) {

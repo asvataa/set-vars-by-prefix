@@ -11,6 +11,10 @@ inputs:
   varsPrefix:
     description: 'Prefix of variables'
     required: true
+  removePrefix:
+    description: "Set true if you need to remove prefix before set to env"
+    required: false
+    default: "false"
 runs:
   using: 'node16'
   main: 'index.js'
